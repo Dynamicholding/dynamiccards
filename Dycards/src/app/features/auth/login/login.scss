@@ -1,0 +1,105 @@
+
+.logo-container {
+  padding-top: 2rem;
+
+  .mascota {
+    img {
+      width: 5rem !important;
+    }
+  }
+
+  .logo,
+  .mascota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 0;
+
+    img {
+      width: 20rem;
+
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.login-container {
+  max-width: 400px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #00afef;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #354c7f;
+
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: .5rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: .5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  button {
+
+    width: 100%;
+    padding: .75rem;
+    background-color: #354c7f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+
+    /* &:disabled {
+      background-color: #a0c4ff;
+      cursor: not-allowed;
+    } */
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+.modal-container {
+  z-index: 1000; // lo suficientemente alto, pero no destructivo
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    img {
+        width: 20rem;
+        margin-right: -10px;
+        margin-bottom: -10px;
+    }
+}

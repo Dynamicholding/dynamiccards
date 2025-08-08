@@ -1,0 +1,88 @@
+.financial-container {
+    background: #fff;
+    padding: 2rem;
+
+    h3 {
+        color: #354C7F;
+     margin-top: 0;
+     font-size: 1.5rem;
+     text-align: center;
+     font-weight: bold;
+
+     }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        color: #fff;
+
+        .card {
+            background-color: #354C7F;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+
+            &:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.3s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 0.7s;
+            }
+
+            h2 {
+                margin: 0.5rem 0;
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+                color: #ccc;
+            }
+
+            strong {
+                font-size: 1.4rem;
+                display: block;
+                margin-top: 0.5rem;
+            }
+
+            i {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+                color: #00afef;
+            }
+        }
+    }
+
+    // Escala a 2 columnas solo en pantallas grandes
+    @media (min-width: 600px) {
+        .cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+}

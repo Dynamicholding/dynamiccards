@@ -1,0 +1,20 @@
+<div class="sidebar" [class.hidden]="!isVisible">
+  <nav class="sidebar">
+    <ul>
+      <li routerLink="/admin/dashboard" routerLinkActive="active">
+        <i class="fas fa-home"></i> Dashboard
+      </li>
+      <li routerLink="/admin/usuarios" routerLinkActive="active">
+        <i class="fas fa-users"></i> Usuarios
+      </li>
+      <li routerLink="/admin/cuentas" routerLinkActive="active">
+        <i class="fas fa-university"></i> Cuentas
+      </li>
+      <li routerLink="/admin/configuracion" routerLinkActive="active">
+        <i class="fas fa-cog"></i> Configuración
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<button class="sidebar-toggle" (click)="toggleSidebar()">☰</button>

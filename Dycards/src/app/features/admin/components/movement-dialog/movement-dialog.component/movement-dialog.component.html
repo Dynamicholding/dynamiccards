@@ -1,0 +1,35 @@
+<div class="movement-container">
+  <div class="modal-header">
+    <h2 mat-dialog-title class="dialog-title">Registrar Movimiento</h2>
+    <div class="user-info">
+      <p><strong>Agente:</strong> {{ data.username }}</p>
+      <p><strong>Cuenta:</strong> {{ data.account_num }}</p>
+    </div>
+  </div>
+
+  <!-- <h2 mat-dialog-title class="dialog-title">Registrar Movimiento</h2> -->
+
+  <form [formGroup]="movementForm" (ngSubmit)="registrarMovimiento()">
+    <div class="body-modal">
+      <div class="form-group">
+        <label for="tipo">Tipo*</label>
+        <select id="tipo" name="tipo" class="campo" formControlName="tipo" required>
+          <option value="" disabled>Seleccione tipo</option>
+          <option value="Consulta">Consulta</option>
+          <option value="Proceso">Proceso</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="monto">Monto*</label>
+        <input type="number" id="monto" class="campo" formControlName="monto" required placeholder="Monto" />
+      </div>
+    </div>
+    <div class="footer-body">
+      <div class="modal-actions">
+        <button type="button" (click)="cerrarModal()">Cancelar</button>
+        <button type="submit" [disabled]="movementForm.invalid">Registrar</button>
+      </div>
+    </div>
+  </form>
+</div>

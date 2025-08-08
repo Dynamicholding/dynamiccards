@@ -1,0 +1,102 @@
+.dashboard {
+    padding: 0rem 1rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+
+    .intro, h3 {
+        color: #354C7F;
+        margin-top: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+    .resumen {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .card{
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+            background: #354C7F;
+            text-align: center;
+            transition: transform 0.2s ease;
+
+            .icon {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+                color: #00afef;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 1rem;
+                color: #D9D9D9;
+            }
+
+            p {
+                margin: 0.5rem 0 0;
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #D9D9D9;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        .saldo {
+            border-left: 5px solid #ea7500;
+        }
+
+        .ahorro {
+            border-left: 5px solid #00afef;
+        }
+
+        .inversion {
+            border-left: 5px solid #001c47;
+        }
+    }
+
+    .movimientos {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #f8f8f8;
+            font-weight: bold;
+            color: #354C7F;
+        }
+
+        .ingreso {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .egreso {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+}

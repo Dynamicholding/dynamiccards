@@ -1,0 +1,72 @@
+[
+  {
+    "id": "centrales-riesgo",
+    "title": "CENTRALES DE RIESGO",
+    "description": "Consulta Datacredito",
+    "amount": 134999,
+    "icon": "fa-piggy-bank"
+  },
+  {
+    "id": "juridico",
+    "title": "JURIDICO",
+    "description": "",
+    "amount": 99999,
+    "icon": "fa-file-invoice-dollar"
+  },
+  {
+    "id": "contable",
+    "title": "CONTABLE",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-credit-card"
+  },
+  {
+    "id": "agencia-envios-courier",
+    "title": "AGENCIA DE ENVIOS COURIER",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "agencia-envios-travel",
+    "title": "AGENCIA DE VIAJES  TRAVEL",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "lion-king-muebleria",
+    "title": "LION KING MUEBLERIA",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "aceros-vidrios",
+    "title": "ACEROS Y VIDRIOS",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "cambio",
+    "title": "CAMBIO",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "arquitectura",
+    "title": "ARQUITECTURA",
+    "description": "",
+    "amount": 9999,
+    "icon": "fa-fire"
+  },
+  {
+    "id": "tecnology",
+    "title": "TECNOLOGY",
+    "description": "Soluciones Integrales",
+    "amount": 9999,
+    "icon": "fa-laptop"
+  }
+]

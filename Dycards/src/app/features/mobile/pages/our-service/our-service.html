@@ -1,0 +1,12 @@
+<section class="financial-container">
+  <h3>Servicios / Productos</h3>
+
+  <div class="cards">
+    <div class="card" *ngFor="let service of services" (click)="goToDetail(service.id)">
+      <i class="fa-solid" [ngClass]="service.icon"></i>
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.description }}</p>
+      <strong>{{ service.amount | currency:'COP':'symbol':'1.0-0' }}</strong>
+    </div>
+  </div>
+</section>

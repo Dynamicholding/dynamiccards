@@ -1,0 +1,198 @@
+{
+  "centrales-riesgo": [
+    {
+      "titulo": "¿QUE SON CÉNTRALES DE RIESGO?",
+      "descripcion": "En Colombia, las centrales de riesgo, también conocidas como burós de crédito o centrales de información crediticia, son entidades privadas que recopilan, almacenan y gestionan la información financiera y crediticia de personas y empresas. Esta información, que incluye historial de pagos, deudas y comportamiento crediticio, es utilizada por entidades financieras y otras empresas para evaluar el riesgo de otorgar créditos o servicios a individuos y organizaciones."
+    },
+    {
+      "titulo": "CIFIN Y DATACREDITO EXPIRIAN",
+      "descripcion": "Cifin (ahora TransUnion) y Datacrédito Experian son centrales de riesgo que recopilan y administran información financiera y crediticia de personas y empresas. Su función principal es generar reportes de crédito que las entidades financieras utilizan para evaluar el riesgo crediticio de solicitantes y tomar decisiones sobre la aprobación o no de créditos, préstamos, entre otros."
+    },
+    {
+    "titulo": "¿QUE ES CIFIN?",
+    "descripcion": "CIFIN, ahora (TransUnion), es la Central de Información Financiera que desempeña un papel fundamental en las decisiones crediticias. Su función principal es recolectar datos crediticios de personas y empresas. Las entidades financieras lo utilizan para evaluar la solvencia de los solicitantes de préstamos, tarjetas de crédito y más. Por ejemplo, cuando solicitas un crédito para vehículo, CIFIN entra en juego, ya que las entidades financieras consultan este organismo para evaluar tu historial crediticio. Por lo tanto es importante mantener un buen registro de pagos y obligaciones con el fin de aumentar tus posibilidades para obtener un préstamo a favor."
+  },
+  {
+    "titulo": "¿QUE ES DATACREDITO EXPIRIAN?",
+    "descripcion": "DataCrédito Experian es una central de riesgo crediticio en Colombia, administrada por la empresa global Experian. Su función principal es recopilar, almacenar y procesar datos financieros y crediticios de personas y empresas para proporcionar información a entidades financieras y comerciales, permitiéndoles evaluar la capacidad de pago de sus clientes."
+  },
+  {
+    "titulo": "¿QUE ES EL SCORE CREDITICIO?",
+    "descripcion": "El puntaje crediticio (o credit score) es un número que resume el historial crediticio de una persona, indicando a los prestamistas la probabilidad de que pague sus deudas a tiempo. Generalmente, un buen puntaje crediticio facilita la obtención de préstamos, tarjetas de crédito y mejores tasas de interés. Este número se calcula a partir de la información en tu informe crediticio, como el historial de pagos, la cantidad de crédito utilizado y la antigüedad de tus cuentas."
+  }
+  ],
+  "juridico": [
+    {
+      "titulo": "PROCESO CIVIL",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "ADMINISTRATIVO",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "COMERCIAL",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "PENAL",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "contable": [
+    {
+      "titulo": "ADMINISTRATIVA",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "FINANCIERA",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "FISCAL",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "agencia-envios-courier": [
+    {
+      "titulo": "DHL",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "FEDES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "DEPRISA",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "agencia-envios-travel": [
+    {
+      "titulo": "HOTELES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "VUELOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "ARQUILER DE AUTOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "CRUCEROS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "AIRBNB CALI",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "TURISMO",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "lion-king-muebleria": [
+    {
+      "titulo": "CAMAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "COMODOR",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "SALAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "COCINAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "CLOSED",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "EQUIPO DE OFICINA",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "aceros-vidrios": [
+    {
+      "titulo": "BAÑOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "VENTANAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "TERRASAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "BALCONES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "cambio": [
+    {
+      "titulo": "REPARACIONES MENORES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "ELECTRICIDAD",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "MATERIALES BIOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "arquitectura": [
+    {
+      "titulo": "DISEÑO DE INTERIORES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "RENDER",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "PLANOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ],
+  "tecnology": [
+    {
+      "titulo": "DESARROLLO DE SOFTWARE",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "CAMARAS DE SEGURIDAD",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "ACESORIOS TECNOLOGICOS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "MANTENIMNIENTO DE COMPUTADORES",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "MANTENIIENTO DE IMPRESORAS",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "REDES DE INTERNER",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    },
+    {
+      "titulo": "DOMOTICA",
+      "descripcion": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto."
+    }
+  ]
+}

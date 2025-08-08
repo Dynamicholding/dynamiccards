@@ -1,0 +1,21 @@
+<div class="content-video">
+   <!--  <p><span (click)="goBack()" class="btn-back">Home</span> | Servicio</p> -->
+    <h3>Conoce mas sobre nosotros</h3>
+    <div *ngIf="videoUrl">
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                [src]="videoUrl" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                class="video-frame"
+            ></iframe>
+        </div>
+    </div>
+
+    <div *ngIf="!videoUrl">
+        <p>Video no disponible</p>
+    </div>
+</div>

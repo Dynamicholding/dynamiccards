@@ -1,0 +1,17 @@
+/* footer.component.scss */
+.mobile-footer {
+  background: #eee;
+  color: #333;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+
+  p {
+    font-size: .8rem;
+    .ley {
+      font-size: .7rem;
+      color: blue;
+      font-weight: 500;
+    }
+  }
+}

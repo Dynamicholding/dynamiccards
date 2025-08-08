@@ -1,0 +1,61 @@
+<div class="dashboard">
+    <p class="intro">Información financiera</p>
+    <div class="resumen">
+        <div class="resumen">
+            <div class="card saldo">
+                <i class="fa-solid fa-wallet icon"></i>                
+                <p>{{ account?.saldo_total | currency }}</p>
+                <h2>Comisión</h2>
+            </div>
+            <div class="card ahorro">
+                <i class="fa-solid fa-piggy-bank icon"></i>                
+                <p>{{ account?.saldo_ahorro | currency }}</p>
+                <h2>Ahorro</h2>
+            </div>
+            <div class="card inversion">
+                <i class="fa-solid fa-chart-line icon"></i>                
+                <p>{{ account?.saldo_inversiones | currency }}</p>
+                <h2>Inversión</h2>
+            </div>
+        </div>
+    </div>
+
+    <h3>Historial</h3>
+    <table class="movimientos">
+        <thead>
+            <tr>
+                <th>Serv / Prod</th>
+                <th>Monto</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of movements">
+                <td>{{ m.type }}</td>
+                <td [ngClass]="{ ingreso: m.monto > 0, egreso: m.monto < 0 }">
+                    ${{ m.amount | number:'1.0-0' }}
+                </td>
+                <td>{{ m.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- <table>
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of movements">
+            <td>{{ m.type }}</td>
+            <td>{{ m.amount | currency }}</td>
+            <td>{{ m.date | date: 'shortDate' }}</td>
+        </tr>
+    </tbody>
+</table> -->

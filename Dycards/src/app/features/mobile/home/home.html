@@ -1,0 +1,52 @@
+
+<div class="user-profile" *ngIf="user">
+        <div class="user-profile__photo">
+            <img [src]="'../../../assets/images/' + user.avatar + '.png'" alt="Perfil del usuario">
+        </div>
+
+        <div class="user-profile__info">
+            <div class="user-profile__info-name">{{ user.name }}</div>
+            <div class="user-profile__info-email">{{ user.email }}</div>
+            <div class="user-profile__info-email">{{ user.phone }}</div>
+            <div class="terminos-condiciones">
+                <p>¡Atención!</p>
+                <i (click)="openInfo()" class="fa-solid fa-circle-info"></i>
+            </div>
+        </div>
+    </div>
+
+<div class="home-container">
+    
+    <!-- Iconos de contacto -->
+    <div class="contact-icons">
+        <a href="mailto:administrativo@gefi.com" target="_blank">
+            <img src="assets/images/icons/em.png" alt="Email">
+        </a>
+        <a href="https://wa.me/573243340225" target="_blank">
+            
+            <img src="assets/images/icons/ws.png" alt="WhatSap">
+        </a>
+        <a href="tel:+573243340255" target="_blank">
+            <img src="assets/images/icons/ph.png" alt="Phone">
+        </a>
+    </div>
+
+    <!-- Servicio -->
+    <div class="service" *ngFor="let s of services">
+        <img [src]="'assets/images/' + s.imagen" alt="{{ s.titulo }}">
+        <div class="info">
+            <h3 [routerLink]="['/mobile/our-service']" class="titulo-link">{{ s.titulo }}</h3>
+            <!-- <h3 [routerLink]="['/product', s.id]" class="titulo-link">{{ s.titulo }}</h3>
+            <p>{{ s.descripcion }}</p> -->
+        </div>
+        <!-- <div class="video-icon" [routerLink]="['/video', s.id]">
+            <i class="fa-solid fa-play"></i>
+        </div> -->
+    </div>
+
+    <div class="actions">
+        <button class="fin" routerLink="/mobile/dashboard">Mis finanzas</button>
+        <button class="cer" (click)="logout()">Cerrar Sesión</button>
+    </div>
+    
+</div>

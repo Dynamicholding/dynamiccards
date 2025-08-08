@@ -1,0 +1,14 @@
+.content-video {
+    padding: 0 1rem;
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+
+
+        .video-frame {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+}
