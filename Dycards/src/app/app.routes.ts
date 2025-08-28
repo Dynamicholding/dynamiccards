@@ -18,6 +18,22 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./features/auth/login/login').then((m) => m.Login)
     },
+    {
+        path: 'register',
+        loadComponent: () =>
+            import('./features/auth/register/register').then((m) => m.Register)
+    },
+    {
+        path: 'olvide',
+        loadComponent: () =>
+            import('./features/auth/forgot-password/forgot-password').then((m) => m.ForgotPassword)
+    },
+    {
+        path: 'reset-password/:token',
+        loadChildren: () => 
+            import('./features/auth/reset-password/reset-password').then((m) => m.ResetPassword)
+    },
+
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     {
         path: '**',

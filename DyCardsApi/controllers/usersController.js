@@ -25,11 +25,11 @@ exports.create = async (req, res) => {
   try {
     // Validar nueva contraseña
     const defaultPassword = 'Dyn12345.*';
-    if (!isStrongPassword(defaultPassword)) {
+    /* if (!isStrongPassword(defaultPassword)) {
       return res.status(400).json({
         message: 'La contraseña debe tener mínimo 8 caracteres, con mayúsculas, minúsculas, números y un carácter especial.'
       });
-    }
+    } */
     
     const hashed = await bcrypt.hash(defaultPassword, 10);
     const user = await User.create({ 

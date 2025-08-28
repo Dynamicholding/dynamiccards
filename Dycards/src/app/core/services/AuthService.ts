@@ -35,8 +35,6 @@ export class AuthService {
         localStorage.setItem('user', JSON.stringify(res.user));
 
         const role = res.user?.role;
-        console.log('Usuario logueado:', res.user);
-        console.log('Rol:', role);
 
         if (role === 'admin') {
           this.router.navigate(['/admin/dashboard']);
@@ -49,9 +47,66 @@ export class AuthService {
 
         this.userSubject.next(res.user);
       }),
-      map(res => res) // 👈 Esto lo envía al subscribe del componente
+      map(res => res) // Esto lo envía al subscribe del componente
     );
+  }
 
+  /** Registro de usuario */
+  register(userData: FormData | any) {
+    return this.http.post<any>(`${this.apiUrl}/register`, userData).pipe(
+      catchError(err => {
+        console.error('Error en peticion HTTP:', err);
+        return throwError(() => err);
+      }),
+      tap((res: any) => {
+        this.saveToken(res.token);
+        localStorage.setItem('user', JSON.stringify(res.data));
+
+        const role = res.data?.role;
+
+        if (role === 'admin') {
+          this.router.navigate(['/admin/dashboard']);
+        } else if (role === 'user') {
+          this.router.navigate(['/mobile/home']);
+        } else {
+          console.warn('Rol desconocido', role);
+          this.router.navigate(['/unauthorized']);
+        }
+
+        this.userSubject.next(res.user);
+      }),
+      map(res => res)
+    );
+  }
+
+  /** Recuperar contraseña */
+  forgodPassword(email: string) {
+    return this.http.post<any>(`${this.apiUrl}/forgot_password`, email).pipe(
+      catchError(err => {
+        console.error('Error en recuperación de contraseña:', err);
+        return throwError(() => err);
+      }),
+      map(res => res)
+    );
+  }
+
+  /** Validar Token */
+  validateResetToken(token: string) {
+    return this.http.get<any>(`${this.apiUrl}/validate-reset-token/${token}`).pipe(
+      catchError(err => throwError(() => err)),
+      map(res => res)
+    );
+  }
+
+  /** Cambiar contraseña */
+  resetPassword(token: string, newPassword: string) {
+    return this.http.post<any>(`${this.apiUrl}/reset-password`, {
+      token,
+      password: newPassword
+    }).pipe(
+      catchError(err => throwError(() => err)),
+      map(res => res)
+    );
   }
 
   // ✅ Guardar token
@@ -80,5 +135,4 @@ export class AuthService {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
-
 }

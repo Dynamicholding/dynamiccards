@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y colores base */
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f9f9f9;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+}
+
+/* Títulos principales */
+h1 {
+    font-size: 2rem;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Secciones */
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: #555;
+}
+
+/* Párrafos */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+ul ul, ol ul {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Negritas */
+strong {
+  color: #1a73e8;
+}
+
+/* Contacto */
+h3:last-of-type {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+ul:last-of-type {
+  background-color: #eef6ff;
+  padding: 1rem;
+  border: 1px solid #cce0ff;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}

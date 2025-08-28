@@ -23,13 +23,13 @@
         }
     }
 
-    .cards {
+    .mycards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         color: #fff;
 
-        .card {
+        .mycard {
             background-color: #354C7F;
             border-radius: 10px;
             padding: 1rem;

@@ -1,0 +1,16 @@
+*** Verificar que el archivo exista ***
+ls -l /var/www/DyCardsApi/uploads/perfiles/perfil_1144154810.png
+
+*** Configurar nginx ***
+sudo nano /etc/nginx/sites-available/dyncards-frontend
+
+*** Compilar y Actualizar ***
+sudo nginx -t && sudo systemctl reload nginx
+
+*** Validar que una carpeta exista en del server ***
+mkdir -p /var/www/DyCardsApi/uploads/perfiles
+chown -R www-data:www-data /var/www/DyCardsApi/uploads
+
+
+http://localhost:3000/imagenes/perfiles/perfil_1111769746.png
+

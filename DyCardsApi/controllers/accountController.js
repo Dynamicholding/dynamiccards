@@ -79,7 +79,7 @@ exports.getAccountMovements = async (req, res) => {
     }
 
     // Obtener los movimientos relacionados
-    console.log('Consultando movimientos para la cuenta:', id);
+    //console.log('Consultando movimientos para la cuenta:', id);
     const movements = await Movement.findAll({
       where: { account_id: id },
       order: [['date', 'DESC']]
@@ -119,10 +119,7 @@ exports.getByUserId = async (req, res) => {
 /* Obtener número de cuenta por teléfono de usuario */
 exports.getAccountByPhone = async (req, res) => {
   try {
-    const { phone } = req.params;
-
-    console.log(phone);
-    
+    const { phone } = req.params;    
 
     if (!phone || phone.length < 7) {
       return res.status(400).json({ error: 'Número de teléfono inválido' });
@@ -135,8 +132,7 @@ exports.getAccountByPhone = async (req, res) => {
     }
 
     const account = await Account.findOne({ where: { users_id: user.id } });
-    console.log("ID: " + user.id);
-    
+    //console.log("ID: " + user.id);
 
     if (!account) {
       return res.status(404).json({ error: 'No se encontró cuenta para ese usuario' });

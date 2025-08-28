@@ -6,6 +6,24 @@
     </div>
     <div class="accordion-content" *ngIf="item.abierto">
       <p>{{ item.descripcion }}</p>
-    </div>
+
+      <!-- Carrusel de imágenes -->
+      <div class="carousel">
+        <img *ngFor="let img of item.imagenes" [src]="img" alt="Imagen relacionada" />
+      </div>
+
+      <!-- Enlaces a redes sociales -->
+      <div class="social-links">
+        <a *ngIf="item.redes.facebook" [href]="item.redes.facebook" target="_blank">
+          <img src="assets/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a *ngIf="item.redes.tiktok" [href]="item.redes.tiktok" target="_blank">
+          <img src="assets/icons/tiktok.svg" alt="Tiktok" />
+        </a>
+        <a *ngIf="item.redes.instagram" [href]="item.redes.instagram" target="_blank">
+          <img src="assets/icons/instagram.svg" alt="Instagram" />
+        </a>
+      </div>
+    </div>     
   </div>
 </div>

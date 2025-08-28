@@ -25,7 +25,6 @@ exports.getMovementsByPhone = async (req, res) => {
 
     // 1. Buscar usuario
     const user = await User.findOne({ where: { phone } });
-    console.log("Users: ", user);
 
     if (!user) {
       return res.status(404).json({ error: 'Cuenta no encontrada para el usuario' });
@@ -61,8 +60,6 @@ exports.getMovementsByPhone = async (req, res) => {
 /* CREAR MOVIMIENTOS */
 exports.createMovement = async (req, res) => {
   try {
-    console.log('BODY:', req.body);
-
     let { type, amount, account_num, } = req.body;
 
     /* const validacion = validarNumeroCelular(account_num); */
@@ -78,13 +75,11 @@ exports.createMovement = async (req, res) => {
       account_num = '+57' + account_num;
     }
 
-
     // 1. Obtener la cuenta asociada
     const account = await Account.findOne({ where: { account_num } });
     if (!account || !account.id) {
       return res.status(400).json({ error: 'Cuenta no encontrada o sin ID válido' });
     }
-
 
     // 2. Crear el movimiento
     const newMovement = await Movement.create({

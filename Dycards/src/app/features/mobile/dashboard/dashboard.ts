@@ -37,9 +37,7 @@ export class Dashboard implements OnInit {
       });
     }
 
-    if (phone) {
-      console.log(phone);
-      
+    if (phone) {     
       this.movementAPI.getByPhone(phone).subscribe({
         next: (data: MovementResponse) => {
           this.movements = data.movements;

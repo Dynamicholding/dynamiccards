@@ -1,13 +1,16 @@
 
 <div class="user-profile" *ngIf="user">
         <div class="user-profile__photo">
-            <img [src]="'../../../assets/images/' + user.avatar + '.png'" alt="Perfil del usuario">
+            <img [src]="avatarUrl" alt="Foto de perfil">
+            <img [src]="'https://dyncards.com/imagenes/perfiles/' + user.profileImage" />
+
         </div>
 
         <div class="user-profile__info">
             <div class="user-profile__info-name">{{ user.name }}</div>
             <div class="user-profile__info-email">{{ user.email }}</div>
-            <div class="user-profile__info-email">{{ user.phone }}</div>
+            <div class="user-profile__info-phone">{{ user.phone }}</div>
+            <div class="user-profile__info-codigo">{{ user.codigo }}</div>
             <div class="terminos-condiciones">
                 <p>¡Atención!</p>
                 <i (click)="openInfo()" class="fa-solid fa-circle-info"></i>
@@ -19,14 +22,14 @@
     
     <!-- Iconos de contacto -->
     <div class="contact-icons">
-        <a href="mailto:administrativo@gefi.com" target="_blank">
+        <a href="mailto:dynamichco@gmail.com" target="_blank">
             <img src="assets/images/icons/em.png" alt="Email">
         </a>
-        <a href="https://wa.me/573243340225" target="_blank">
+        <a href="https://wa.me/573243340211" target="_blank">
             
             <img src="assets/images/icons/ws.png" alt="WhatSap">
         </a>
-        <a href="tel:+573243340255" target="_blank">
+        <a href="tel:+573243340211" target="_blank">
             <img src="assets/images/icons/ph.png" alt="Phone">
         </a>
     </div>

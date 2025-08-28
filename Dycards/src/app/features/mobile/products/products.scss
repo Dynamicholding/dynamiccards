@@ -44,3 +44,29 @@
     transform: translateY(0);
   }
 }
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.carousel img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+}
+

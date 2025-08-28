@@ -17,10 +17,8 @@ export class UserService {
 
     /** Insertar usuarios */
     createUser(user: User): Observable<User> {
-        console.log(user);
-        
         const token = localStorage.getItem('token');
-        console.log('Token enviado:', token);
+        //console.log('Token enviado:', token);
         const headers = new HttpHeaders({
             Authorization: `Bearer ${token}`
         });

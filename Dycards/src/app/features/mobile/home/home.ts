@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { InfoDialog } from './components/info-dialog/info-dialog';
+import { environment } from '@environments/environment';
 
 
 @Component({
@@ -19,38 +20,49 @@ import { InfoDialog } from './components/info-dialog/info-dialog';
 export class Home implements OnInit {
   user: any = null;
   services: any[] = [];
-  
+  avatarUrl: string = '';
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private http: HttpClient,
     private dialog: MatDialog
-  ) {  }
+  ) { }
 
   ngOnInit(): void {
     try {
       const userData = this.authService.getUser();
+      /* console.log("Datos: ", userData); */
 
-      if (userData) {
-        const fullName = this.capitalizeWords(
-          `${userData.name || userData.nombres || ''} ${userData.apellido || ''}`
-        ).trim();
 
-        this.user = {
-          ...userData,
-          name: fullName,
-          email: userData.email,
-          avatar: userData.avatar && userData.avatar.trim() !== '' ? userData.avatar : 'default'
-        };
-      } else {
-        console.warn('⚠️ Usuario no encontrado en localStorage');
+      if (!userData) {
+        console.warn('Usuario no encontrado en localStorage');
+        return
       }
 
-      console.log('👤 Usuario procesado:', this.user);
+      const fullName = this.capitalizeWords(
+        `${userData.name || userData.first_name || ''} ${userData.last_name || ''}`
+      ).trim();
+
+      this.user = {
+        ...userData,
+        name: fullName,
+        email: userData.email,
+        codigo: userData.codigo,
+        avatar: userData.avatar && userData.avatar.trim() !== '' ? userData.avatar : 'default'
+      };
+      
+      // Construir la URL completa de la imagen
+      if (this.user.avatar) {
+        this.avatarUrl = `${environment.assetsUrl}/imagenes/perfiles/${this.user.avatar}`;
+      } else {
+        this.avatarUrl = 'assets/images/default.jpg';
+      }
+
     } catch (error) {
       console.error('Error al procesar usuario:', error);
     }
-    
+
     this.http.get<any[]>('assets/data/services.json').subscribe({
       next: (data) => {
         this.services = data;
@@ -60,7 +72,6 @@ export class Home implements OnInit {
         console.error('Error al cargar servicios:', err);
       }
     });
-
   }
 
   logout(): void {

@@ -66,7 +66,7 @@ export class MovementDialogComponent {
       account_num: this.data.account_num
     };
 
-    console.log('Número de cuenta recibido:', this.data.account_num);
+    //console.log('Número de cuenta recibido:', this.data.account_num);
 
     Swal.fire({
       title: '¿Confirmar registro?',

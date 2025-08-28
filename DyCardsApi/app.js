@@ -4,21 +4,42 @@ const cors = require('cors');
 const sequelize = require('./config/db');
 const sandboxRoutes = require('./routes/sandbox');
 const path = require('path');
-
+const uploadRoutes = require('./routes/upload');
 
 const app = express();
 app.use(cors({
-   //origin: 'http://localhost:4200', // tu app Angular - Local
    origin: ['http://localhost:4200', 'https://dyncards.com', 'https://www.dyncards.com'],
   credentials: true
 }));
 
 app.use(express.json());
 
-// Servir archivos estáticos (como avatares)
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+/* const isProd = process.env.NODE_ENV === 'production';
+const imagePath = isProd
+  ? '/var/www/DyCardsApi/uploads/perfiles'
+  : path.join(__dirname, 'uploads/perfiles'); */
+
+/* app.use('/imagenes/perfiles', express.static(imagePath)); */
+
+app.use('/imagenes/perfiles', express.static(path.join(__dirname, 'uploads/perfiles')));
+
+/* app.use('/imagenes/perfiles', express.static(path.join(__dirname, 'uploads/perfiles'))); */
+
+
+/* app.use('/imagenes/perfiles', (req, res, next) => {
+  console.log('Solicitud de imagen:', req.url);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+}, express.static(path.join(__dirname, 'uploads/perfiles'))); */
+
+/* console.log('Ruta destino:', path.join(__dirname, '../uploads/perfiles')); */
+
+/* app.use('/imagenes/perfiles', express.static('/var/www/DyCardsApi/uploads/perfiles')); */
+
 
 // Rutas princuipales
+app.use('/api', uploadRoutes);
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/accounts', require('./routes/account'));
@@ -28,11 +49,6 @@ app.use('/api/sandbox', sandboxRoutes);
 app.get('/api', (req, res) => {
   res.send('API de DyCards en funcionamiento');
 });
-
-
-// Ruta para subir imágenes
-const uploadRoutes = require('./routes/upload.routes');
-app.use('/api', uploadRoutes);
 
 /* Tareas programadas */
 require('./jobs/corte.job');

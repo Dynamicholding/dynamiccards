@@ -15,7 +15,9 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   selector: 'app-root',
   standalone: true,
   /* imports: [RouterOutlet, CommonModule, Navbar], */
-  imports: [RouterOutlet, CommonModule],
+  imports: [ 
+    RouterOutlet, 
+    CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

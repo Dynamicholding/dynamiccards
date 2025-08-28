@@ -1,0 +1,151 @@
+{
+  "centrales-riesgo": [
+    {
+      "titulo": "¿Que entregamos en tu consulta?",
+      "descripcion": "La consulta incluye: Datacredito EXPERIAN (PDF) - CIFIN (PDF) - Rama Judicial (PDF) - Tránsito SIMIT (PDF) - Link con la información general de todas las consultas, aconsejándole los pasos a seguir para recuperar su historial crediticio. NOTA: Tiempo máximo de entrega de consulta es 48 Horas. Somos su mejor aliado para recuperar su historial crediticio."
+    },
+    {
+      "titulo": "¿Que son centrales de riesgo?",
+      "descripcion": "Las centrales de riesgo, también conocidas como burós de crédito o centrales de información crediticia, son entidades privadas que recopilan, almacenan y gestionan la información de Personas Naturales y Empresas para conocer el comportamiento COMERCIAL Y FINANCIERO; emitiendo un reporte positivo o negativo. Esta información incluye el historial de pagos, deudas y comportamiento crediticio, para ser utilizada por entidades financieras y otras empresas al evaluar el riesgo para otorgar créditos o servicios a Personas Naturales y Empresas.."
+    },
+    { 
+      "titulo": "¿Cual es la función de CIFIN y DATACREDITO EXPERIAN?",
+      "descripcion": "Cifin (ahora TransUnion) y Datacrédito Experian, son centrales de riesgo que recopilan y administran información financiera y crediticia de personas y empresas. Su función principal es generar reportes de crédito que las entidades financieras utilizan para evaluar el riesgo crediticio de solicitantes y tomar decisiones sobre la aprobación o no de créditos, préstamos, entre otros.."
+    },
+    {
+    "titulo": "¿Qué es CIFIN?",
+    "descripcion": "CIFIN, ahora (TransUnion), es la Central de Información Financiera que desempeña un papel fundamental en las decisiones crediticias. Sufunción principal es recolectar datos crediticios de personas y empresas. Las entidades financieras lo utilizan para evaluar la solvencia de los solicitantes de préstamos, tarjetas de crédito y más. Por ejemplo, cuando solicitas un crédito para vehículo, CIFIN entra en juego, ya que las entidades financieras consultan este organismo para evaluar tu historial crediticio. Por lo tanto es importante mantener un buen registro de pagos y obligaciones con el fin de aumentar tus posibilidades para obtener un préstamo a favor.."
+  },
+  {
+    "titulo": "¿Qué es DATACREDITO EXPIRIAN?",
+    "descripcion": "DataCrédito Experian es una central de riesgo crediticio en Colombia, administrada por la empresa global Experian. Su función principal es recopilar, almacenar y procesar datos financieros y crediticios de personas y empresas para proporcionar información a entidades financieras y comerciales, permitiéndoles evaluar la capacidad de pago de sus clientes."
+  },
+  {
+    "titulo": "¿Qué es SCORE CREDITICIO?",
+    "descripcion": "El puntaje crediticio (o credit score) es un número que resume el historial crediticio de una persona, indicando a las entidades la probabilidad de que pague sus deudas a tiempo. Generalmente, un buen puntaje crediticio facilita la obtención de préstamos, tarjetas de crédito y mejores tasas de interés. Este número se calcula a partir de la información en tu informe crediticio, como el historial de pagos, la cantidad de crédito utilizado y la antigüedad de tus cuentas.",
+    "imagen": "Aqui la imagen del score."
+  }
+  ],
+  "juridico": [
+    {
+      "titulo": "PROCESO CIVIL",
+      "descripcion": "Pensiones, Temas laborales en público y privado."
+    },
+    {
+      "titulo": "ADMINISTRATIVO",
+      "descripcion": "Asesoría en procesos notariales con inmuebles, Tramites notariales."
+    },
+    {
+      "titulo": "COMERCIAL",
+      "descripcion": "Créditos y Cartera, Propiedad intelectual."
+    }
+  ],
+  "contable": [
+    {
+      "titulo": "ADMINISTRATIVA",
+      "descripcion": "Asesoría especial en Seguridad Social, Inscripción y actualización de Rut, Asesoría en Nomina y F.E, Facturación electrónica, Creación de empresas naturales y jurídicas"
+    },
+    {
+      "titulo": "FINANCIERA",
+      "descripcion": "Elaboración de Estados Financieros, Certificados de Ingresos."
+    },
+    {
+      "titulo": "FISCAL",
+      "descripcion": "Elaboración y presentación de impuestos nacionales - municipales."
+    }
+  ],
+  "agencia-envios-courier": [
+    {
+      "titulo": "DHL - FEDES - DEPRISA",
+      "descripcion": "Servicio de Courier – Mensajería rápida y segura a cualquier parte del mundo. Seguimiento en tiempo real y entrega eficiente. Transporte de paquetes, documentos y mercancía con tarifas especiales. Cobertura a nivel nacional sin salir de casa. Vamos a tu domicilio y nos encargamos de recibir y despachar."
+    }
+  ],
+  "agencia-envios-travel": [
+    {
+      "titulo": "HOTELES",
+      "descripcion": "Descuento en hospedaje en hoteles a nivel mundial."
+    },
+    {
+      "titulo": "VUELOS",
+      "descripcion": "Tarifas especiales."
+    },
+    {
+      "titulo": "ARQUILER DE AUTOS",
+      "descripcion": "Descuento en servicios de alquiler de vehículos a nivel mundial."
+    },
+    {
+      "titulo": "CRUCEROS",
+      "descripcion": "Descuentos especiales."
+    },
+    {
+      "titulo": "AIRBNB CALI",
+      "descripcion": "Descuento en hospedaje."
+    }
+  ],
+  "lion-king-muebleria": [
+    {
+      "titulo": "MOBILIARIO HOGAR",
+      "descripcion": "Camas, Juegos de sala, Comedor, Camarotes, Closets, Cocina Integral, Centro de Entretenimiento, Diseño de Interiores y Enchapes."
+    },
+    {
+      "titulo": "MOBILIARIO OFICINA",
+      "descripcion": "Recepción, Escritorios Modulares, Salas de Juntas, Sala de Espera, Archiovadores."
+    }
+  ],
+  "aceros-vidrios": [
+    {
+      "titulo": "ACEROS Y VIDRIOS",
+      "descripcion": "Vidrio – Espejos Biselados - Ventanas - Puertas – Fachadas - Espejos decorativos - Marquetería."
+    }
+  ],
+  "cambio": [
+    {
+      "titulo": "REMODELACIONES Y REPARACIONES LOCATIVAS",
+      "descripcion": "Soluciones constructivas con Biomateriales, sustentables y basadas en economía circular - Obra civil desde cero - Optimización de recursos - Ampliación de terrazas con sistemas modulares - Obra blanca. Reparaciones eléctricas, hidráulicas y sanitarias – Obra blanca."
+    },
+    {
+      "titulo": "MATERIALES BIO",
+      "descripcion": "Enfocados en la transformación del sector de la bioconstrucción mediante la oferta de soluciones innovadoras y sostenibles. Generamos el aprovechamiento de residuos agroindustriales Desarrollamos una variedad de Bioproductos acorde a la necesidad de los clientes Garantizamos característica técnicas y normativas de resistencia, densidad y termoacústica."
+    }
+  ],
+  "arquitectura": [
+    {
+      "titulo": "PROYECTOS",
+      "descripcion": "• Diseñamos y construimos proyectos acordes a tus necesidades con innovación y compromiso. Arquitectura • Ingeniería Civil."
+    },
+    {
+      "titulo": "ESTUDIOS",
+      "descripcion": "• Planos • Renders • Estudios de Suelo • Calculo Estructural • Licecia de Construción."
+    }
+  ],
+  "tecnology": [
+    {
+      "titulo": "DESARROLLO DE SOFTWARE",
+      "descripcion": "Especialistas en la creación y diseño de software a medida para empresas y organizaciones - Sistematización y Automatización."
+    },
+    {
+      "titulo": "CÁMARAS DE SEGURIDAD CCTV",
+      "descripcion": "Instalación y suministro de Cámaras de Seguridad CCTV para Hogares y Empresas."
+    },
+    {
+      "titulo": "ACESORIOS TECNOLOGICOS",
+      "descripcion": "Contamos con un gran stock en accesorios tecnológicos para tu empresa u hogar."
+    },
+    {
+      "titulo": "MANTENIMNIENTO DE COMPUTADORES",
+      "descripcion": "Mantenimiento, Reparación y Venta de Computadores"
+    },
+    {
+      "titulo": "MANTENIIENTO DE IMPRESORAS",
+      "descripcion": "Mantenimiento, Reparación y Venta de iMPRESORAS."
+    },
+    {
+      "titulo": "REDES DE INTERNET",
+      "descripcion": "Redes innalambricas y cableadaS para negocios u oficinas, ampliación de cobertura para la red WIFI"
+    },
+    {
+      "titulo": "DOMOTICA",
+      "descripcion": "Cumple tus sueños de una casa inteligente"
+    }
+  ]
+}

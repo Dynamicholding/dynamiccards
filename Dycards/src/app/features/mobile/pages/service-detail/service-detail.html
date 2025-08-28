@@ -2,11 +2,39 @@
   <h3>Detalles del servicio</h3>
 
   <mat-accordion *ngIf="details.length > 0; else noData" multi>
-    <mat-expansion-panel *ngFor="let item of details; let i = index" [expanded] = "i === 0">
+    <mat-expansion-panel *ngFor="let item of details; let i = index" [expanded]="i === 0">
       <mat-expansion-panel-header>
         <mat-panel-title>{{ item.titulo }}</mat-panel-title>
       </mat-expansion-panel-header>
       <p>{{ item.descripcion }}</p>
+
+      <!-- Carrusel -->
+      <carousel 
+        [itemsPerSlide]="1" 
+        [singleSlideOffset]="true" 
+        [interval]="0" 
+        [noPause]="false" 
+        [showIndicators]="true"
+        (touchstart)="onTouchStart($event)" 
+        (touchend)="onTouchEnd($event)"
+      >
+        <slide *ngFor="let img of item.imagenes">
+          <img [src]="img" class="imagen-institucional" style="max-height: 400px; object-fit: cover;" />
+        </slide>
+      </carousel>
+
+      <!-- Enlaces a redes sociales -->
+      <div class="social-links" *ngIf="item.redes">
+        <a *ngIf="item.redes.facebook" [href]="item.redes.facebook" target="_blank">
+          <img src="assets/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a *ngIf="item.redes.instagram" [href]="item.redes.instagram" target="_blank">
+          <img src="assets/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a *ngIf="item.redes.tiktok" [href]="item.redes.tiktok" target="_blank">
+          <img src="assets/icons/tiktok.svg" alt="Tiktok" />
+        </a>
+      </div>
     </mat-expansion-panel>
   </mat-accordion>
 
@@ -14,5 +42,3 @@
     <p>No se encontraron detalles para este servicio.</p>
   </ng-template>
 </section>
-
-

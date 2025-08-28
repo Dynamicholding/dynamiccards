@@ -1,5 +1,6 @@
 // src/environments/environment.ts
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000/api' // Ajusta si cambiaste tu prefijo en Node.js
+  apiUrl: 'http://localhost:3000/api', // Ajusta si cambiaste tu prefijo en Node.js
+  assetsUrl: 'http://localhost:3000'
 };

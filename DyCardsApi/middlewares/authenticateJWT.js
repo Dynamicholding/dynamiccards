@@ -9,7 +9,7 @@ function authenticateJWT(req, res, next) {
     return res.status(401).json({ message: 'Token no proporcionado' });
   }
 
-  console.log('Authorization Header:', req.headers.authorization);
+  //console.log('Authorization Header:', req.headers.authorization);
 
   const token = authHeader.split(' ')[1];
   

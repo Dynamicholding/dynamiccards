@@ -17,10 +17,25 @@ const User = sequelize.define('User', {
     type: DataTypes.ENUM('active', 'inactive'),
     defaultValue: 'active'
   },
-  father_id: DataTypes.INTEGER,
+  
+  father_id: {
+    type: DataTypes.INTEGER,
+    allowNull: true
+  },
+
   reset_token: DataTypes.TEXT,
   reset_token_expiry: DataTypes.DATE,
-  avatar: DataTypes.STRING(45),
+
+  avatar: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  
+  codeAg: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+
   role: {
     type: DataTypes.ENUM('user', 'admin'),
     allowNull: false,
