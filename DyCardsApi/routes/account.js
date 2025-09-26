@@ -11,6 +11,7 @@ router.get('/:id/movements', accountController.getAccountMovements);
 router.get('/by-user/:userId', accountController.getByUserId);
 
 router.get('/getAccountByPhone/:phone', accountController.getAccountByPhone);
+router.get('/getSaldo/:phone', accountController.getSaldo);
 /* router.get('/movements/by-phone/:phone', accountController.getMovementsByPhone); */
 
 

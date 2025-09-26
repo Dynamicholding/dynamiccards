@@ -109,28 +109,28 @@ export class AuthService {
     );
   }
 
-  // ✅ Guardar token
+  // Guardar token
   saveToken(token: string): void {
     localStorage.setItem('token', token);
   }
 
-  // ✅ Guardar usuario
+  // Guardar usuario
   saveUser(user: any): void {
     localStorage.setItem('user', JSON.stringify(user));
   }
 
-  // 👤 Obtener usuario
+  // Obtener usuario
   getUser(): any {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) : null;
   }
 
-  // 🔐 Verificar si está autenticado
+  // Verificar si está autenticado
   isAuthenticated(): boolean {
     return !!localStorage.getItem('token');
   }
 
-  // 🚪 Cerrar sesión
+  // Cerrar sesión
   logout(): void {
     localStorage.clear();
     this.router.navigate(['/login']);

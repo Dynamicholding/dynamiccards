@@ -1,0 +1,75 @@
+.record-container {
+    padding: 1rem;
+    background: #f9f9f9;
+    height: auto;
+}
+
+.record-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .balance {
+        margin-top: 0.5rem;
+
+        span {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
+.movements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.movement-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    .movement-info {
+        display: flex;
+        flex-direction: column;
+
+        .date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .type {
+            font: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    .amount {
+        font-size: 1rem;
+        font-weight: 600;
+
+        &.positive {
+            color: #2ecc71;
+        }
+
+        &.negative {
+            color: #e74c3c;
+        }
+    }
+}

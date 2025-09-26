@@ -1,26 +1,25 @@
+<h3>Información financiera</h3>
 <div class="dashboard">
-    <p class="intro">Información financiera</p>
     <div class="resumen">
         <div class="resumen">
-            <div class="card saldo">
-                <i class="fa-solid fa-wallet icon"></i>                
+            <div class="card saldo" [routerLink]="['/mobile/record']">
+                <img src="assets/icon-finanzas/comision.png" alt="">               
                 <p>{{ account?.saldo_total | currency }}</p>
                 <h2>Comisión</h2>
             </div>
             <div class="card ahorro">
-                <i class="fa-solid fa-piggy-bank icon"></i>                
+                <img src="assets/icon-finanzas/ahorro.png" alt="">                
                 <p>{{ account?.saldo_ahorro | currency }}</p>
                 <h2>Ahorro</h2>
             </div>
             <div class="card inversion">
-                <i class="fa-solid fa-chart-line icon"></i>                
+                <img src="assets/icon-finanzas/inversion.png" alt="">                
                 <p>{{ account?.saldo_inversiones | currency }}</p>
                 <h2>Inversión</h2>
             </div>
         </div>
     </div>
-
-    <h3>Historial</h3>
+    <h3>Movimientos recientes</h3>
     <table class="movimientos">
         <thead>
             <tr>
@@ -30,7 +29,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let m of movements">
+            <tr *ngFor="let m of movements | slice:0:5" class="movement-item">
                 <td>{{ m.type }}</td>
                 <td [ngClass]="{ ingreso: m.monto > 0, egreso: m.monto < 0 }">
                     ${{ m.amount | number:'1.0-0' }}
@@ -38,7 +37,7 @@
                 <td>{{ m.date }}</td>
             </tr>
         </tbody>
-    </table>
+    </table> 
 </div>
 
 

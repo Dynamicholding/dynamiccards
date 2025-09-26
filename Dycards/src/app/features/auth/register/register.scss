@@ -174,7 +174,7 @@
   }
 
   .login-form {
-    background: #00afef;
+    background: #030979;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -186,7 +186,7 @@
     h2 {
       text-align: center;
       margin-bottom: 1.5rem;
-      color: #354C7F;
+      color: #ccc;
     }
 
     .form-group {
@@ -222,9 +222,9 @@
         display: flex;
 
         .codigo-agente {
-          flex: 0 0 30px;
-          /* padding: 0.4rem 0.6rem; */
-          font-size: 0.9rem;
+          flex: 0 0 60px;
+          width: 30%;
+          font-size: 0.4rem 0.8rem;
           background-color: #f0f0f0;
           border: 1px solid #ccc;
           border-radius: 8px 0 0 8px;
@@ -270,6 +270,41 @@
         font-size: 0.85rem;
         color: #e74c3c;
       }
+
+      .checkbox-label {
+        display: flex;
+
+        align-items: center;
+        font-size: 14px;
+        color: #ccc;
+        gap: 8px;
+        margin-top: 16px;
+
+        input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+          accent-color: #007bff; // Color institucional (puedes cambiarlo)
+          cursor: pointer;
+          border-radius: 4px;
+          transition: all 0.2s ease-in-out;
+        }
+
+        a {
+          color: #007bff;
+          text-decoration: underline;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .error {
+      font-size: 12px;
+      color: #d9534f;
+      margin-top: 4px;
     }
 
     .perfil-upload {
@@ -329,22 +364,16 @@
       }
 
       span {
-        font-size: 14px;
-        color: #555;
+        font-size: 16px;
+        color: #ccc;
+        font-weight: 500;
       }
     }
-
-
-
-
-
-
-
 
     button[type='submit'] {
       width: 100%;
       padding: 0.8rem;
-      background-color: #3f51b5 !important;
+      background: linear-gradient(135deg, #b8860b, #d4af37, #f5e197) !important;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -384,12 +413,16 @@
       gap: 8px;
 
       span {
-        color: #354C7F;
+        color: #ccc;
       }
 
       a {
+        color: #d0a710;
+        font-weight: 500;
+        cursor: pointer;
+
         &:hover {
-          color: #005a9e;
+          color: #ccc;
           text-decoration: underline;
         }
       }

@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .5rem;
+    .back {
+        i {
+            color: #d0a710;
+            font-size: 1.3rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            cursor: pointer;
+        }
+    }
+    .logo {
+        width: 10rem;
+        img {
+            width: 100%;
+        }
+    }
+}

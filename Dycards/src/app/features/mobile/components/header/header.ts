@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -19,10 +19,13 @@ export class Header {
 
   ngOnInit() {
     /** Ocultar boton de atras en el Home */
-    this.router.events.subscribe(() => {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd){
       this.showButton = !this.router.url.includes('/mobile/home');
+    }
     })
   }
+
   goBack() {
     this.location.back()
   }

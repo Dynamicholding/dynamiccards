@@ -2,6 +2,13 @@ const Account = require('../models/Account');
 const User = require('../models/User');
 const Movement = require('../models/Movement');
 
+const normalizarPhone = (phone) => {
+  if (!phone.startsWith('+57')) {
+    return '+57' + phone;
+  }
+  return phone;
+};
+
 exports.getAllAccounts = async (req, res) => {
   try {
     const accounts = await Account.findAll();
@@ -79,7 +86,7 @@ exports.getAccountMovements = async (req, res) => {
     }
 
     // Obtener los movimientos relacionados
-    //console.log('Consultando movimientos para la cuenta:', id);
+    console.log('Consultando movimientos para la cuenta:', id);
     const movements = await Movement.findAll({
       where: { account_id: id },
       order: [['date', 'DESC']]
@@ -119,20 +126,24 @@ exports.getByUserId = async (req, res) => {
 /* Obtener número de cuenta por teléfono de usuario */
 exports.getAccountByPhone = async (req, res) => {
   try {
-    const { phone } = req.params;    
+    const { phone } = req.params;
+
+    console.log(phone);
+
 
     if (!phone || phone.length < 7) {
       return res.status(400).json({ error: 'Número de teléfono inválido' });
     }
- 
+
     const user = await User.findOne({ where: { phone } });
-    
+
     if (!user) {
       return res.status(404).json({ error: 'Usuario no encontrado con ese teléfono' });
     }
 
     const account = await Account.findOne({ where: { users_id: user.id } });
-    //console.log("ID: " + user.id);
+    console.log("ID: " + user.id);
+
 
     if (!account) {
       return res.status(404).json({ error: 'No se encontró cuenta para ese usuario' });
@@ -145,8 +156,28 @@ exports.getAccountByPhone = async (req, res) => {
   }
 };
 
+// Obtener saldo
+exports.getSaldo = async (req, res) => {
+  try {
+    let { phone } = req.params;
 
+    account_num = normalizarPhone(phone);
+    console.log(account_num);
 
+    const account = await Account.findOne({
+      where: { account_num },
+      attributes: ['saldo_total']
+    });
 
+    if (!account) {
+      return res.status(404).json({ message: 'Cuenta no encontrada' });
+    }
 
+    res.json({ saldo_actual: account.saldo_total });
+    console.log('Saldo actual:', account.saldo_total);
 
+  } catch (error) {
+    console.error('Error en la consulta de saldo', error);
+    res.status(500).json({ error: 'No se pudo recuperar el saldo por celular' });
+  }
+};

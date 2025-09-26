@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-XJALE7NK.js";import"./chunk-W7CVV6HF.js";import"./chunk-6V5HM2SA.js";import"./chunk-RV5NW52E.js";import"./chunk-FFVJ5LNJ.js";import"./chunk-GA7F47FV.js";var o=[{path:"",children:[{path:"dashboard",component:t},{path:"",loadChildren:()=>import("./chunk-Y4O7Q33D.js")},{path:"",redirectTo:"dashboard",pathMatch:"full"}]}];export{o as default};

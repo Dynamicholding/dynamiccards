@@ -1,0 +1,24 @@
+<app-header />
+<h3>Productos / Servicios</h3>
+<section class="financial-container">
+  <div class="mycards">
+    <div class="mycard" *ngFor="let service of services" (click)="goToDetail(service.id)">
+      <!-- <i class="fa-solid" [ngClass]="service.icon"></i>
+      <img [src]="service.imagen" alt=""> -->
+      <img [src]="service.image" alt="{{ service.title }}" class="card-image" />
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+
+<!--   <h3>Productos</h3>
+  <div class="mycards">
+    <div class="mycard" *ngFor="let product of products" (click)="goToDetail(product.id)">
+      <i class="fa-solid" [ngClass]="product.icon"></i>
+      <img [src]="product.imagen" alt="">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description }}</p>
+      <strong>{{ product.amount | currency:'COP':'symbol':'1.0-0' }}</strong>
+    </div>
+  </div> -->
+</section>

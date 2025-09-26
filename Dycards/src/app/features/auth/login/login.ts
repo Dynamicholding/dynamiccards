@@ -8,6 +8,8 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'src/app/core/services/AuthService';
 import { MatDialog } from '@angular/material/dialog';
 import { WelcomeModal } from '../../../shared/components/welcome-modal/welcome-modal';
+import { Header } from '../../layout/header/header';
+import { Footer } from "../../layout/footer/footer";
 
 
 @Component({
@@ -18,8 +20,10 @@ import { WelcomeModal } from '../../../shared/components/welcome-modal/welcome-m
     ReactiveFormsModule,
     RouterModule,
     MatIconModule,
-    MatButtonModule
-  ],
+    MatButtonModule,
+    Header,
+    Footer
+],
   templateUrl: './login.html',
   styleUrls: ['./login.scss']
 })
@@ -93,7 +97,7 @@ export class Login {
         console.error('Error en el componente:', err);
         this.loading = false;
 
-        if (err.status === 401) {
+        if (err.status === 401 || err.status === 404) {
           this.errorMessage = 'Credenciales incorrectas. Intenta nuevamente.';
         } else if (err.status === 0) {
           this.errorMessage = 'No se pudo conectar con el servidor.';

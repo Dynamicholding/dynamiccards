@@ -1,0 +1,1 @@
+import{a as n}from"./chunk-6V5HM2SA.js";import{c as t,e as o}from"./chunk-RV5NW52E.js";import{da as e}from"./chunk-GA7F47FV.js";var v=()=>{let r=e(t),p=`${n.apiUrl}/movements`;return{getByPhone:i=>r.get(`${p}/by-phone/${i}`)}},f=[o()];export{v as a};

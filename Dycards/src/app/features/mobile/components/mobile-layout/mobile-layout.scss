@@ -1,0 +1,11 @@
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px; // 👈 deja espacio para la barra inferior
+  }
+}

@@ -1,8 +1,8 @@
-<div class="mobile-header" [class.center-logo]="!showButton">
-    <div class="back">
-       <span *ngIf="showButton" (click)="goBack()"><i class="fa-solid fa-arrow-left"></i></span>
+<div class="header">
+    <div class="back" *ngIf="showButton">
+        <span (click)="goBack()"><i class="fa-solid fa-arrow-left"></i></span>
     </div>
     <div class="logo">
-        <img src="../../../assets/images/logo_dymcolor.png" alt="Logo Empresa" />
+        <img src="../../../assets/images/logo_dyndorado.png" alt="Logo Empresa" />
     </div>
 </div>

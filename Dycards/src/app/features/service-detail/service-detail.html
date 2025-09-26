@@ -1,0 +1,52 @@
+<app-header />
+<h3>Detalles del servicio</h3>
+<section class="service-detail">
+  <mat-accordion *ngIf="details.length > 0; else noData" multi>
+    <mat-expansion-panel *ngFor="let item of details; let i = index" [expanded]="i === 0">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ item.titulo }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ item.descripcion }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div *ngFor="let item2 of details">
+    <div class="carousel">
+      <!-- Carrusel -->
+      <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="true" [interval]="0" [noPause]="false"
+        [showIndicators]="true" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        <slide *ngFor="let img of item2.imagenes">
+          <img [src]="img" class="imagen-institucional" style="max-height: 400px; object-fit: cover;" />
+        </slide>
+      </carousel>
+    </div>
+    <!-- Enlaces a redes sociales -->
+
+    <div class="social-links" *ngIf="item2.redes">
+      <div class="dorado-gradiente">CONECTA Catálogo</div>
+      <div class="redes">
+        <a *ngIf="item2.redes.facebook" [href]="item2.redes.facebook" target="_blank">
+          <img src="assets/icons/facebook.png" alt="Facebook" />
+        </a>
+        <a *ngIf="item2.redes.instagram" [href]="item2.redes.instagram" target="_blank">
+          <img src="assets/icons/instagram.png" alt="Instagram" />
+        </a>
+        <a *ngIf="item2.redes.tiktok" [href]="item2.redes.tiktok" target="_blank">
+          <img src="assets/icons/tiktok.png" alt="Tiktok" />
+        </a>
+        <a class="aling-end" *ngIf="item2.redes.whatsap" [href]="item2.redes.whatsap" target="_blank">
+          <img src="assets/icons/wsd.png" alt="whatsap" />
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="url dorado-gradiente" *ngIf="item2.url">
+      <div class="dorado-gradiante"> CONECTA Tutorial </div>
+      <a href="{{ item2.url.link_1 }}" target="_blank">@dynamichco.com</a>
+    </div>
+
+  </div>
+  <ng-template #noData>
+    <p>No se encontraron detalles para este servicio.</p>
+  </ng-template>
+</section>

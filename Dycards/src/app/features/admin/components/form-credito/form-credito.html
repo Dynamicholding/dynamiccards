@@ -1,0 +1,47 @@
+<h2 class="form-title">Registrar Crédito</h2>
+
+<div class="usuario-card">
+  <div class="avatar">
+    <div class="usuario-info">
+      <p><strong>Nombre:</strong> {{ usuario?.first_name }}</p>
+      <p><strong>Documento:</strong> {{ usuario?.dni }}</p>
+      <p><strong>Cuenta:</strong> {{ usuario?.phone }}</p>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="creditoForm" (ngSubmit)="registrarOperacion()" class="form-container">
+  <input type="hidden" formControlName="account_num">
+
+  <!-- Tipo de crédito -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Tipo</mat-label>
+    <mat-select formControlName="tipo">
+      <mat-option value="consulta">Consulta</mat-option>
+      <mat-option value="proceso">Proceso</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Campo para proceso -->
+  <mat-form-field *ngIf="mostrarCampoProceso" appearance="outline" class="full-width">
+    <mat-label>Valor del Proceso</mat-label>
+    <input matInput type="number" formControlName="valorProceso" placeholder="Ingrese valor del proceso">
+  </mat-form-field>
+
+  <!-- Monto calculado -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Monto</mat-label>
+    <!-- <input matInput formControlName="monto" readonly> -->
+    <input matInput [value]="creditoForm.get('monto')?.value | currency:'COP':'symbol-narrow':'1.0-0'" readonly>
+  </mat-form-field>
+
+  <!-- Botones -->
+  <div class="actions">
+    <button mat-raised-button color="primary" type="submit" [disabled]="!creditoForm.valid">
+      Registrar
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="close()">
+      Cancelar
+    </button>
+  </div>
+</form>

@@ -13,6 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { UserFormComponent } from './user-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MovementDialogComponent } from '../../components/movement-dialog/movement-dialog.component/movement-dialog.component';
+import { ModalOperacionesComponent } from '../../components/modal-operaciones/modal-operaciones.component';
 
 @Component({
   selector: 'app-users',
@@ -54,14 +55,29 @@ export class Users implements OnInit {
     });
   }
 
-  /** Modal Crear Movimietos */  
+  /** Modal de operaciones financieras */
+  openOperacionesModal(user: User): void {
+    const dialogRef = this.dialog.open(ModalOperacionesComponent, {
+      width: '400px',
+      data: user
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('Operación seleccionada:', result);
+        // Si quieres, aquí puedes refrescar movimientos o mostrar un toast
+      }
+    });
+  }
+
+  /** Modal Crear Movimietos */
   /************************* */
   openMovementDialog(user: User): void {
     const dialogRef = this.dialog.open(MovementDialogComponent, {
       width: '400px',
       data: {
         username: user.first_name,
-        account_num: user.phone 
+        account_num: user.phone
       }
     });
 

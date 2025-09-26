@@ -1,0 +1,32 @@
+[
+  {
+    "id": "lion-king-muebleria",
+    "title": "MOBILIARIO",
+    "description": "Muebles y Diseño de Interiores",
+    "image": "assets/images/1-mobiliario.png"
+  },
+  {
+    "id": "aceros-vidrios",
+    "title": "ACERO Y VIDRIO",
+    "description": "Todo para tu Hogar",
+    "image": "assets/images/aceroyvidrio.png"
+  },
+  {
+    "id": "cambio",
+    "title": "CONSTRUCIÓN SOSTENIBLE",
+    "description": "Remodelación Proyectos",
+    "image": "assets/images/1-cambio.png"
+  },
+  {
+    "id": "arquitectura",
+    "title": "ARQUITECTURA",
+    "description": "Construimos de Proyectos",
+    "image": "assets/images/1-arquitectura.png"
+  },
+  {
+    "id": "tecnology",
+    "title": "TECNOLOGÍA",
+    "description": "Soluciones en Informatica",
+    "image": "assets/images/1-tecnologia.png"
+  }
+]

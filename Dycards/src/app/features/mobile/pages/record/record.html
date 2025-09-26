@@ -1,0 +1,26 @@
+<div class="record-container">
+  <!-- Header -->
+  <div class="record-header">
+    <h2>Movimientos</h2>
+    <div class="balance">
+      <span>Saldo</span>
+      <h3>{{ balance | currency:'USD':'symbol' }}</h3>
+    </div>
+  </div>
+
+  <!-- Lista de movimientos -->
+  <div class="movements-list">
+    <div *ngFor="let mov of movements" class="movement-item">
+      <div class="movement-info">
+        <span class="date">{{ mov.date | date:'dd MMMM' }}</span>
+        <span class="type">{{ mov.type }}</span>
+      </div>
+      <div 
+        class="amount" 
+        [ngClass]="{ 'positive': mov.amount > 0, 'negative': mov.amount < 0 }">
+        {{ mov.amount | currency:'USD':'symbol' }}
+      </div>
+    </div>
+  </div>
+</div>
+

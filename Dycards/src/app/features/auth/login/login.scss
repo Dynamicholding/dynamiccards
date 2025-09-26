@@ -8,10 +8,8 @@
 
 } */
 .login-bg {
-  background-image: url("/assets/images/Fondo2.png");
   .header-login {
-    padding-top: 2rem;
-
+    padding-top: .5rem;
     .mascota {
       img {
         width: 5rem !important;
@@ -38,7 +36,7 @@
   }
 
   .login-form {
-    background: #00afef;
+    background: #030979;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -50,7 +48,7 @@
     h2 {
       text-align: center;
       margin-bottom: 1.5rem;
-      color: #354C7F;
+      color: #ccc;
     }
 
     .form-group {
@@ -121,7 +119,7 @@
     button[type='submit'] {
       width: 100%;
       padding: 0.8rem;
-      background-color: #3f51b5 !important;
+      background: linear-gradient(135deg, #b8860b, #d4af37, #f5e197) !important;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -161,12 +159,15 @@
       gap: 8px;
 
       span {
-        color: #354C7F;
+        color: #ccc;
       }
 
       a {
+        color: #d0a710;
+        font-size: 1rem;
+        font-weight: 600;
         &:hover {
-          color: #005a9e;
+          color: #ccc;
           text-decoration: underline;
         }
       }

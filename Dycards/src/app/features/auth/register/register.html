@@ -1,12 +1,5 @@
+<app-header />
 <div class="register-bg">
-    <div class="header-login">
-        <div class="mascota">
-            <img src="../../../assets/images/dyn_mascota.png" alt="Logo Empresa" />
-        </div>
-        <div class="logo">
-            <img src="../../../assets/images/logo_dyndorado.png" alt="Logo Empresa" />
-        </div>
-    </div>
     <div class="form-content">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form" autocomplete="off">
             <h2>Crear Cuenta</h2>
@@ -77,19 +70,21 @@
             <div class="form-group">
                 <div class="password-wrapper">
                     <input id="confirmPassword" [type]="hideConfirmPassword ? 'password' : 'text'"
-                        formControlName="confirmPassword" placeholder="Repetir contraseña" />
-                    <button type="button" class="toggle" (click)="togglePasswordVisibility()">
-                        <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                        formControlName="confirmPassword"
+                        [class.invalid]="confirmPassword?.invalid && confirmPassword?.touched"
+                        placeholder="Repetir contraseña" />
+                    <button type="button" class="toggle" (click)="togglePasswordVisibility2()">
+                        <mat-icon>{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
                     </button>
                 </div>
-                <div class="error" *ngIf="registerForm.errors?.['mismatch'] && confirmPassword?.touched">
+                <div class="error" *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
                     <span>Las contraseñas no coinciden.</span>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="campo">
-                    <input type="text" class="codigo-agente" value="DHC" disabled />
+                    <input type="text" value="DHC" class="codigo-agente" disabled>
                     <input id="code" type="number" class="input-agente" formControlName="code"
                         placeholder="Código agente" />
                 </div>
@@ -98,18 +93,23 @@
                 </div>
             </div>
 
-            <!-- <div class="form-group">
-                <div class="campo">
-                    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
-                </div>
-            </div> -->
-
             <div class="custom-file-upload">
                 <span>Sube una foto a tu perfil</span>
                 <button type="button" (click)="fileInput.click()"><i class="fa-solid fa-image"></i></button>
                 <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" hidden />
                 <span *ngIf="fotoPerfil">{{ fotoPerfil.name }}</span>
             </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" formControlName="terms" />
+                    Acepto <a href="/terminos" target="_blank">Politidcas Dynamic</a>
+                </label>
+                <div class="error" *ngIf="terms?.invalid && terms?.touched">
+                    <span>Debes aceptar los términos para continuar.</span>
+                </div>
+            </div>
+
 
             <button type="submit" [disabled]="loading || registerForm.invalid">
                 <span *ngIf="!loading">Ingresar</span>
@@ -124,7 +124,7 @@
 
             <!-- Enlaces adicionales dentro del formulario -->
             <div class="extra-links">
-                <span><a (click)="goToLogin()">¿Ya tienes una cuenta? Inicia sesión</a></span>
+                <span>¿Ya tienes una cuenta? <a (click)="goToLogin()">Inicia sesión</a></span>
             </div>
         </form>
     </div>

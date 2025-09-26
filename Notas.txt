@@ -14,3 +14,58 @@ chown -R www-data:www-data /var/www/DyCardsApi/uploads
 
 http://localhost:3000/imagenes/perfiles/perfil_1111769746.png
 
+
+*** Iniciar desde la ruta ***
+pm2 start ecosystem.config.js
+
+*** vlidar que el backehnd este corriendo en el pierto correcto ***
+
+*** Verifica que NGINX esté corriendo ***
+sudo systemctl status nginx
+root@srv942803:~# sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2025-09-20 13:36:27 UTC; 2 days ago
+       Docs: man:nginx(8)
+   Main PID: 226803 (nginx)
+      Tasks: 2 (limit: 4654)
+     Memory: 9.6M (peak: 13.6M)
+        CPU: 6.886s
+     CGroup: /system.slice/nginx.service
+             ├─226803 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─229440 "nginx: worker process"
+
+Sep 20 13:36:27 srv942803 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Sep 20 13:36:27 srv942803 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Sep 20 17:30:41 srv942803 systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Sep 20 17:30:41 srv942803 nginx[229438]: 2025/09/20 17:30:41 [notice] 229438#229438: signal process started
+Sep 20 17:30:41 srv942803 systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+
+*** Para ver el estado de tus procesos ***
+pm2 list
+
+*** Verifica que MySQL esté iniciado ***
+systemctl status mysql
+
+
+*** PM2 ***
+-----------
+** Detener el procesos
+pm2 delete DyCardsApi
+
+** Establecer las variables en powershell
+$env:MAINTENANCE_MODE = "true"
+$env:MAINTENANCE_END = (Get-Date).AddMinutes(30).ToString("yyyy-MM-ddTHH:mm:ss")
+
+** Verificar
+Write-Host $env:MAINTENANCE_END
+
+*** Iniciar el procesos
+pm2 start app.js --name DyCardsApi
+
+*** EN PRODUCCIÓN ***
+*Siempre que cambies el .env, ejecuta:
+
+pm2 delete DyCardsApi
+pm2 start app.js --name DyCardsApi
+

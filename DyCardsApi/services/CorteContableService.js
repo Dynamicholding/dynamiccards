@@ -45,7 +45,7 @@ class CorteContableService {
                         desc: `Ahorro transferido a inversiones con utilidad del 3% (${utilidad.toFixed(2)}).`,
                         date: new Date()
                     });
-                    //console.log('ID de cuenta:', account.id, account.account_id);
+                    console.log('ID de cuenta:', account.id, account.account_id);
 
                 }
             }

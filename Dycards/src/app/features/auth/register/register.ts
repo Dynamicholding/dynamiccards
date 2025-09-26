@@ -5,11 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Route, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/AuthService';
+import { Header } from '../../layout/header/header';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [MatIconModule, ReactiveFormsModule, CommonModule],
+  imports: [MatIconModule, ReactiveFormsModule, CommonModule, Header],
   templateUrl: './register.html',
   styleUrls: ['./register.scss']
 })
@@ -37,6 +38,7 @@ export class Register {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]],
       code: ['', [Validators.required]],
+      terms: [false, Validators.requiredTrue],
     }, { validator: this.passwordMatchValidator });
   }
 
@@ -48,6 +50,11 @@ export class Register {
 
   togglePasswordVisibility(): void {
     this.hidePassword = !this.hidePassword;
+
+  }
+
+  togglePasswordVisibility2(): void {
+    this.hideConfirmPassword = !this.hideConfirmPassword;
   }
 
   /** Foto perfil */
@@ -108,4 +115,5 @@ export class Register {
   get password() { return this.registerForm.get('password'); }
   get confirmPassword() { return this.registerForm.get('confirmPassword'); }
   get code() { return this.registerForm.get('code'); }
+  get terms() { return this.registerForm.get('terms'); }
 }

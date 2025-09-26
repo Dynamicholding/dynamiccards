@@ -3,60 +3,60 @@
     "id": "centrales-riesgo",
     "title": "CENTRALES DE RIESGO",
     "description": "Consulta Centrales de Riesgo",
-    "icon": "fa-file-invoice-dollar"
+    "image": "assets/images/1-centrales.png"
   },
   {
     "id": "contable",
     "title": "CONTABLE",
     "description": "Asesoría Contable y Financiera",
-    "icon": "fa-calculator"
+    "image": "assets/images/1-contable.png"
   },
   {
     "id": "juridico",
     "title": "JURIDICO",
     "description": "Asesoria Especializada",
-    "icon": "fa-gavel"
+    "image": "assets/images/1-juridico.png"
   },
   {
     "id": "agencia-envios-courier",
     "title": "DYNAMIC COURIER",
     "description": "Servicio Mensajeria Personalizada",
-    "icon": "fa-paper-plane"
+    "image": "assets/images/1-courier.png"
   },
   {
     "id": "agencia-envios-travel",
     "title": "DYNAMIC TRAVEL IN",
     "description": "Agencia de Viajes",
-    "icon": "fa-suitcase"
+    "image": "assets/images/1-travel.png"
   },
   {
     "id": "lion-king-muebleria",
     "title": "MOBILIARIO",
     "description": "Muebles y Diseño de Interiores",
-    "icon": "fa-couch"
+    "image": "assets/images/1-mobiliario.png"
   },
   {
     "id": "aceros-vidrios",
     "title": "ACERO Y VIDRIO",
     "description": "Todo para tu Hogar",
-    "icon": "fa-door-open"
+    "image": "assets/images/aceroyvidrio.png"
   },
   {
     "id": "cambio",
     "title": "CONSTRUCIÓN SOSTENIBLE",
     "description": "Remodelación Proyectos",
-    "icon": "fa-person-digging"
+    "image": "assets/images/1-cambio.png"
   },
   {
     "id": "arquitectura",
     "title": "ARQUITECTURA",
     "description": "Construimos de Proyectos",
-    "icon": "fa-city"
+    "image": "assets/images/1-arquitectura.png"
   },
   {
     "id": "tecnology",
     "title": "TECNOLOGÍA",
     "description": "Soluciones en Informatica",
-    "icon": "fa-laptop"
+    "image": "assets/images/1-tecnologia.png"
   }
 ]

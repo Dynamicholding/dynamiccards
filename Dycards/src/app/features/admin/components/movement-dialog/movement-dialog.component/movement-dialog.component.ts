@@ -78,7 +78,7 @@ export class MovementDialogComponent {
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
-        this.movementService.createMovement(movimiento).subscribe({
+        this.movementService.credit(movimiento).subscribe({
           next: (res) => {
             Swal.fire({
               icon: 'success',

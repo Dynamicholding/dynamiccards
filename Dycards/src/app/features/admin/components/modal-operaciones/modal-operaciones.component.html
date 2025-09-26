@@ -1,0 +1,24 @@
+<mat-card class="operaciones-card">
+  <mat-card-header>
+    <mat-card-title>Operaciones Financieras</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="acciones">
+      <button mat-stroked-button color="primary" (click)="abrirModal('credito')">
+        <mat-icon>add_circle</mat-icon>
+        Hacer Crédito
+      </button>
+
+      <button mat-stroked-button color="warn" (click)="abrirModal('debito')">
+        <mat-icon>remove_circle</mat-icon>
+        Hacer Débito
+      </button>
+
+      <button mat-stroked-button color="accent" (click)="abrirModal('movimientos')">
+        <mat-icon>bar_chart</mat-icon>
+        Ver Movimientos
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

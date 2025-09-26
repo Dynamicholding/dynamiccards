@@ -148,8 +148,8 @@ exports.register = async (req, res) => {
       users_id: user.id,
       account_num: nrocta
     });
-    /* console.log('Usuario creado:', user);
-    console.log('Token generado:', token); */
+    console.log('Usuario creado:', user);
+    console.log('Token generado:', token);
 
     const userData = user.toJSON ? user.toJSON() : user;
     delete userData.password;

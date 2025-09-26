@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { AccountService } from 'src/app/core/services/accountService';
 import { MovementService } from 'src/app/core/services/movementService';
 import { Account } from 'src/app/models/account.model';
@@ -9,7 +10,7 @@ import { Movement } from 'src/app/models/movements.model';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   providers: [
@@ -48,7 +49,4 @@ export class Dashboard implements OnInit {
       });
     }
   }
-
 }
-
-

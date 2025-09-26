@@ -1,0 +1,67 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  /* max-width: 600px; */
+  width: 100%;
+  /* margin: 2rem auto; */
+  /* background: none; */
+  border-radius: 12px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+ 
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+  padding-top: 2rem;
+}
+
+.usuario-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px;
+  /* margin-bottom: 20px; */
+  /* border-radius: 12px; */
+  background: #f9f9fb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+
+  .avatar {
+    font-size: 40px;
+    color: #1976d2;
+  }
+
+  .usuario-info {
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    strong {
+      color: #333;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  button {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+}

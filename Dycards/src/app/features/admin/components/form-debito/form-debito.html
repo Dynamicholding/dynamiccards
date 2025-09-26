@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Registrar Débito</h2>
+
+<div mat-dialog-content>
+  <p><strong>Saldo actual:</strong> {{ saldoFormateado() }}</p>
+
+  <form [formGroup]="debitoForm">
+    <input type="hidden" formControlName="account_num">
+    <!-- Monto -->
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Monto*</mat-label>
+      <input matInput type="number" formControlName="monto" />
+      <mat-error *ngIf="debitoForm.get('monto')?.hasError('required')">
+        El monto es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="debitoForm.get('monto')?.hasError('min')">
+        El monto debe ser mayor a 0.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Descripción -->
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="descripcion" />
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-stroked-button color="primary" (click)="close()">Cancelar</button>
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="registrarDebito()"
+    [disabled]="debitoForm.invalid"
+  >
+    Registrar
+  </button>
+</div>
+

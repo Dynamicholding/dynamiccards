@@ -90,7 +90,7 @@ export class Home implements OnInit {
     this.dialog.open(InfoDialog, {
       data: {
         title: 'Terminos y Condiciones',
-        message: 'Para cualquier información o trámite relacionado con la Tarjeta Dynamica, los únicos canales oficiales de atención son: administrativo@gefi.com, +57 324 334 0225, 324 334 0225'
+        message: 'Para cualquier información o trámite relacionado con la Tarjeta Dynamica, los únicos canales oficiales de atención son: dynamichco@gmail.com, +57 324 334 0211'
       },
       width: '300px'
     });

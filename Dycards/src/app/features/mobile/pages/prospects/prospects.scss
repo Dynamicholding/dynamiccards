@@ -1,0 +1,33 @@
+
+h3 {
+    background-color: #eee;
+    color: #354C7F;
+    margin-top: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+.prospectos {
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    th {
+        background: #f8f8f8;
+        font-weight: bold;
+        color: #354C7F;
+    }
+}

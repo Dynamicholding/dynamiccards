@@ -1,16 +1,21 @@
+.perfil {
+    padding: 10px;
+}
+
 .user-profile {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-bottom: 1rem;
-    background-color: #00afef;
-    border-radius: 1rem 1rem 0 0;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-bottom: .5rem;
+    background: #030979;
+    /* margin: 10px; */
+    border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    max-width: 100%;
+    /* max-width: 100%; */
     transition: all 0.3s ease-in-out;
-    margin: -1rem;
+    /*  margin: -1rem; */
 
     &__photo {
         width: 130px;
@@ -37,26 +42,31 @@
         &-name {
             /* font-size: 1.25rem; */
             font-weight: bold;
-            color: #fff;
+            color: #ccc;
         }
 
-        &-email, &-phone, &-codigo {
+        &-email,
+        &-phone,
+        &-codigo {
             /* font-size: 0.95rem; */
-            color: #fff;
-            margin-top: 0.25rem;
+            color: #ccc;
+            /*  margin-top: 0.25rem; */
         }
     }
+
     .terminos-condiciones {
         display: flex;
         justify-content: center;
         align-items: center;
         color: #777;
+
         p {
             font-weight: 500;
-            color: #fff;
+            color: #ccc;
         }
+
         i {
-            color: #fff;
+            color: #ccc;
             font-size: 1.5rem;
         }
     }
@@ -70,7 +80,7 @@
     /* border: solid 1px blue; */
     .contact-icons {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 1.5rem;
         padding: 2rem 0 2rem 0;
 
@@ -134,22 +144,14 @@
     }
 
     .actions {
-        /*  display: flex;
-        gap: 0.5rem;
-        margin-top: 0.75rem; */
-
         button {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
             padding: 1rem;
             margin-bottom: 1rem;
-
-            color: white;
-
+            color: #0d4e7c;
             border: none;
             border-radius: 0.5rem;
-
-            cursor: pointer;
             transition: background-color 0.2s;
             width: 100%;
 
@@ -157,13 +159,13 @@
                 background-color: #005fcc;
             }
 
-            &.fin {
-                background-color: #354C7F;
-            }
-
-            &.cer {
-                background-color: #EC221F;
+            &.dorado {
+                background: linear-gradient(135deg, #b8860b, #d4af37, #f5e197);
             }
         }
     }
+}
+
+.separador {
+    padding-top: 40px;
 }

@@ -1,18 +1,17 @@
+h3 {
+    background-color: #eee;
+    color: #354C7F;
+    margin-top: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+
+}
 .dashboard {
     padding: 0rem 1rem;
     max-width: 900px;
     margin: auto;
     font-family: 'Segoe UI', sans-serif;
-
-    .intro, h3 {
-        color: #354C7F;
-        margin-top: 0;
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: bold;
-
-    }
-
     .resumen {
         display: flex;
         flex-direction: column;
@@ -23,35 +22,43 @@
             padding: 1rem;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-            background: #354C7F;
+            background: linear-gradient(135deg, #b8860b, #d4af37, #f5e197);
             text-align: center;
             transition: transform 0.2s ease;
 
-            .icon {
+            /* .icon {
                 font-size: 1.8rem;
                 margin-bottom: 0.5rem;
                 color: #00afef;
+            } */
+
+            img {
+                margin: 0 auto;
+                text-align: center;
+                width: 4rem;
             }
 
             h2 {
                 margin: 0;
-                font-size: 1rem;
-                color: #D9D9D9;
+                font-size: 1.3rem;
+                color: #354C7F;
             }
 
             p {
                 margin: 0.5rem 0 0;
                 font-size: 1.3rem;
                 font-weight: bold;
-                color: #D9D9D9;
+                color: #354C7F;
             }
 
             &:hover {
                 transform: translateY(-4px);
             }
+
+            
         }
 
-        .saldo {
+        /* .saldo {
             border-left: 5px solid #ea7500;
         }
 
@@ -61,7 +68,7 @@
 
         .inversion {
             border-left: 5px solid #001c47;
-        }
+        } */
     }
 
     .movimientos {
